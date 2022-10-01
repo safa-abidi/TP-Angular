@@ -16,7 +16,7 @@ export class CarteVisiteComponent implements OnInit {
   motsCles = "Angular spring flutter";
 
   getImage():string{
-    return "assets/"+this.path;
+    return "assets/" + this.path;
   }
 
   constructor() { }

@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { CarteVisiteComponent } from './components/carte-visite/carte-visite.component';
+import { PereComponent } from './components/pere/pere.component';
+import { FilsComponent } from './components/fils/fils.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    CarteVisiteComponent
+    CarteVisiteComponent,
+    PereComponent,
+    FilsComponent
   ],
   imports: [
     FormsModule,
