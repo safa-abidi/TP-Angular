@@ -1,0 +1,68 @@
+  <div class="container row">
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center col-sm">
+      <div class="card p-4">
+          <div class=" image d-flex flex-column justify-content-center align-items-center"
+              >  <img [src]="getImage()" height="100"
+                      width="100" /><span class="name mt-3">{{firstname}} {{name}}</span> <span
+                  class="idd">{{job}}</span>
+              <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span
+                      class="idd1">{{age}} ans</span> <span><i class="fa fa-copy"></i></span> </div>
+
+
+              <div class="text mt-3"> <span>{{citation}}<br><br> {{description}} </span> </div>
+              <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i
+                          class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i
+                          class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
+              <div class=" px-2 rounded mt-4 "> <span class="join">{{motsCles}}</span> </div>
+             <div class="container"></div>
+
+          </div>
+      </div>
+  </div>
+
+  <div class="container  col-sm">
+
+    <div class="mb-3 ">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" [(ngModel)]="firstname" [value]="firstname">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="name" [value]="name">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="text" class="form-control" [(ngModel)]="age" [value]="age">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Job</label>
+        <input type="text" class="form-control" [(ngModel)]="job" [value]="job">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Profile pic</label>
+        <input type="text" class="form-control" [(ngModel)]="path" [value]="path">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Motto</label>
+        <input type="text" class="form-control" [(ngModel)]="citation" [value]="citation">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" [(ngModel)]="description" [value]="description">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Keywords</label>
+        <input type="text" class="form-control" [(ngModel)]="motsCles" [value]="motsCles">
+    </div>
+
+</div>
+
+  </div>
+
