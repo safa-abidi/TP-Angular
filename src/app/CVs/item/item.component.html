@@ -1,8 +1,11 @@
-<div class="d-flex align-items-center">
+<div class="d-flex align-items-center"
+(click)="showCV()"
+>
   <div class="flex-shrink-0">
-    <img src="../../../assets/images/rayen.png" alt="a profile pic">
+    <img src="../../../assets/images/{{cv.path}}" alt="a profile pic" height="75px">
   </div>
   <div class="flex-grow-1 ms-3">
-    <h4>Rayen samet</h4>
+    <h3>{{cv.name}} {{cv.firstname}}</h3>
+    <p>{{cv.job}}</p>
   </div>
 </div>
