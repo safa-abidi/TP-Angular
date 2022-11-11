@@ -12,6 +12,9 @@ import { CvComponent } from './CVs/cv/cv.component';
 import { ListComponent } from './CVs/list/list.component';
 import { ItemComponent } from './CVs/item/item.component';
 import { DetailComponent } from './CVs/detail/detail.component';
+import { MiniWordComponent } from './components/mini-word/mini-word.component';
+import { RainbowDirective } from './customDirective/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { DetailComponent } from './CVs/detail/detail.component';
     CvComponent,
     ListComponent,
     ItemComponent,
-    DetailComponent
+    DetailComponent,
+    MiniWordComponent,
+    RainbowDirective,
+    DefaultImagePipe
   ],
   imports: [
     FormsModule,

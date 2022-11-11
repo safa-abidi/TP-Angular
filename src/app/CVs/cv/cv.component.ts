@@ -10,14 +10,15 @@ export class CvComponent implements OnInit {
   cvs: CV[] = [
     new CV(
       1,
-      'laabidi',
-      'safa',
+      'Laabidi',
+      'Safa',
       23,
       12345678,
       'software engineering',
       'safa.png'
     ),
-    new CV(2, 'samet', 'rayen', 21, 88774455, 'game dev', 'rayen.png'),
+    new CV(2, 'Samet', 'Rayen', 21, 88774455, 'game dev', 'rayen.png'),
+    new CV(3, 'John', 'Doe', 21, 88774455, 'web dev', ''),
   ];
 
   selectedCV!: CV;

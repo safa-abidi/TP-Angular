@@ -1,11 +1,13 @@
-<div class="d-flex align-items-center"
+<li class="list-group-item">
+  <div class="d-flex align-items-center"
 (click)="showCV()"
 >
   <div class="flex-shrink-0">
-    <img src="../../../assets/images/{{cv.path}}" alt="a profile pic" height="75px">
+    <img src="../../../assets/images/{{cv.path| defaultImage}}" alt="a profile pic" height="75px">
   </div>
   <div class="flex-grow-1 ms-3">
     <h3>{{cv.name}} {{cv.firstname}}</h3>
     <p>{{cv.job}}</p>
   </div>
 </div>
+</li>
