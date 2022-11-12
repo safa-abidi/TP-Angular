@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { DetailComponent } from './CVs/detail/detail.component';
 import { MiniWordComponent } from './components/mini-word/mini-word.component';
 import { RainbowDirective } from './customDirective/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { EmbaucheComponent } from './Embauche/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     DetailComponent,
     MiniWordComponent,
     RainbowDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    EmbaucheComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

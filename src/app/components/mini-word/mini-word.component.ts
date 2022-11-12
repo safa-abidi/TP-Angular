@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mini-word.component.css']
 })
 export class MiniWordComponent implements OnInit {
-  color: String = 'red';
-  fontSize: number = 14;
+  color: String = 'black';
+  fontSize: number = 30;
   font: String = '';
 
   constructor() { }

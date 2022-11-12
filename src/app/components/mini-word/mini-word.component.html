@@ -1,11 +1,10 @@
-<p>mini-word works!</p>
-<p [ngStyle]="{
+<input type="text" [ngStyle]="{
   'color': color,
   'font-size': fontSize + 'px',
   'font-family': font
-}">HOLA, es safa tu amiga favorita</p>
+}"/>
 
-<input appRainbow type="text" class="form-control" [(ngModel)]="color">
+<input type="color" class="form-control" [(ngModel)]="color">
 <br>
 <input type="number" class="form-control" [(ngModel)]="fontSize">
 <br>
@@ -16,3 +15,7 @@
   <option value="Calibri">Calibri</option>
   <option value="Broadway">Broadway</option>
 </select>
+
+<br>
+<label>Rainbow Input</label>
+<input appRainbow type="text" class="form-control">

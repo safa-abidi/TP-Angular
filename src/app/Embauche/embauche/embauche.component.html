@@ -1,0 +1,12 @@
+<div class="container" *ngIf="embauches">
+  Liste des CVs séléctionnés pour embauche
+    <ul class="list-group row">
+      <li class="list-group-item col" *ngFor="let cv of embauches">
+          <img src="../../../assets/images/{{cv.path| defaultImage}}" alt="a profile pic" height="100px">
+        <div>
+          <h3>{{cv.name}} {{cv.firstname}}</h3>
+          <p>{{cv.job}}</p>
+        </div>
+      </li>
+    </ul>
+</div>

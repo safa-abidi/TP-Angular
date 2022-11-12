@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { CvsService } from '../cvs.service';
 import { CV } from '../Model/CV';
 
 @Component({
@@ -7,19 +8,7 @@ import { CV } from '../Model/CV';
   styleUrls: ['./cv.component.css'],
 })
 export class CvComponent implements OnInit {
-  cvs: CV[] = [
-    new CV(
-      1,
-      'Laabidi',
-      'Safa',
-      23,
-      12345678,
-      'software engineering',
-      'safa.png'
-    ),
-    new CV(2, 'Samet', 'Rayen', 21, 88774455, 'game dev', 'rayen.png'),
-    new CV(3, 'John', 'Doe', 21, 88774455, 'web dev', ''),
-  ];
+  cvs: CV[] = [];
 
   selectedCV!: CV;
 
@@ -27,7 +16,9 @@ export class CvComponent implements OnInit {
     this.selectedCV = cv;
   }
 
-  constructor() {}
+  constructor(private cvsService: CvsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cvs = this.cvsService.getCVs();
+  }
 }

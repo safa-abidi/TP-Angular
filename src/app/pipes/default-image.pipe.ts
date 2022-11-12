@@ -5,11 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DefaultImagePipe implements PipeTransform {
 
-  transform(value: string, ...args: unknown[]): string {
-    if (!value || value === '') {
-      return '../../assets/images/boss.png';
+  transform(imageName: string): string {
+    if (!imageName || imageName === '') {
+      return 'boss.png';
     }
-    return value;
+    return imageName;
   }
 
 }

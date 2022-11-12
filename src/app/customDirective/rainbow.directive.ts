@@ -12,15 +12,12 @@ export class RainbowDirective {
   constructor() { }
 
   @HostListener('keyup') onKeyUp() {
-    //this.bc = this.getRandomColor();
-    //this.color = this.getRandomColor();
-    const i = Math.floor(Math.random() * (this.colors.length - 1));
-    this.bc = this.colors[i];
-    this.color = this.colors[i];
+    this.bc = this.getRandomColor();
+    this.color = this.getRandomColor();
   }
 
-  /*getRandomColor(){
+  getRandomColor(){
     return '#'+Math.floor(Math.random()*16777215).toString(16);
-  }*/
+  }
 
 }
