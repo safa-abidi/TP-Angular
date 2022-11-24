@@ -1,0 +1,36 @@
+<div class="container">
+  <form #formulaire="ngForm">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        email="true"
+        ngModel
+        required
+        name="email"
+      />
+      <small *ngIf="formulaire.controls['email'].invalid && formulaire.controls['email'].dirty" id="emailHelp" class="form-text text-danger">
+        Invalid email adress</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        ngModel
+        required
+        minlength="4"
+        name="password"
+      />
+      <small *ngIf="formulaire.controls['password'].invalid && formulaire.controls['password'].dirty" class="form-text text-danger">
+        Password must be longer than 4 characters</small>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" [disabled]="formulaire.invalid" (click)="submit(formulaire)">Submit</button>
+  </form>
+</div>

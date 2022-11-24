@@ -1,0 +1,13 @@
+<div *ngIf="personne" class="container">
+  <h2>Info</h2>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-primary list-group-item-action">{{personne.firstname}} {{personne.name}}</li>
+    <li class="list-group-item list-group-item-action">{{personne.age}} years</li>
+    <li class="list-group-item list-group-item-action">Works as {{personne.job}}</li>
+    <li class="list-group-item list-group-item-action">CIN {{personne.cin}}</li>
+  </ul>
+  <br>
+  <div>
+    <button type="button" class="btn btn-danger" (click)="delete(personne.id)">Delete</button>
+  </div>
+</div>

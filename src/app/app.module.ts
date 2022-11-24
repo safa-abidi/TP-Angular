@@ -17,6 +17,12 @@ import { MiniWordComponent } from './components/mini-word/mini-word.component';
 import { RainbowDirective } from './customDirective/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { EmbaucheComponent } from './Embauche/embauche/embauche.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
+import { DetailsPageComponent } from './CVs/details-page/details-page.component';
+import { AddCVComponent } from './CVs/add-cv/add-cv.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,12 @@ import { EmbaucheComponent } from './Embauche/embauche/embauche.component';
     RainbowDirective,
     DefaultImagePipe,
     EmbaucheComponent,
+    NavbarComponent,
+    NotFoundComponent,
+    RouterSimulatorComponent,
+    DetailsPageComponent,
+    AddCVComponent,
+    LoginComponent,
   ],
   imports: [
     FormsModule,

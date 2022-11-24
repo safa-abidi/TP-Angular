@@ -1,21 +1,25 @@
-<input type="text" [ngStyle]="{
-  'color': color,
-  'font-size': fontSize + 'px',
-  'font-family': font
-}"/>
+<div class="container">
+  <input type="text" [ngStyle]="{
+    'color': color,
+    'font-size': fontSize + 'px',
+    'font-family': font
+  }"/>
 
-<input type="color" class="form-control" [(ngModel)]="color">
-<br>
-<input type="number" class="form-control" [(ngModel)]="fontSize">
-<br>
-<label>Font</label>
-<select #police (change)="changeFont(police.value)">
-  <option value="">--Please choose an option--</option>
-  <option value="Arial">Arial</option>
-  <option value="Calibri">Calibri</option>
-  <option value="Broadway">Broadway</option>
-</select>
+  <input type="color" class="form-control" [(ngModel)]="color">
+  <br>
+  <input type="number" class="form-control" [(ngModel)]="fontSize">
+  <br>
+  <label>Font</label>
+  <select #police (change)="changeFont(police.value)">
+    <option value="">--Please choose an option--</option>
+    <option value="Arial">Arial</option>
+    <option value="Calibri">Calibri</option>
+    <option value="Broadway">Broadway</option>
+  </select>
 
-<br>
-<label>Rainbow Input</label>
-<input appRainbow type="text" class="form-control">
+  <br>
+  <br>
+  <label>Rainbow Input</label>
+  <input appRainbow type="text" class="form-control">
+
+</div>
