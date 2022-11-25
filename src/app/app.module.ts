@@ -23,6 +23,7 @@ import { RouterSimulatorComponent } from './components/router-simulator/router-s
 import { DetailsPageComponent } from './CVs/details-page/details-page.component';
 import { AddCVComponent } from './CVs/add-cv/add-cv.component';
 import { LoginComponent } from './login/login.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LoginComponent } from './login/login.component';
     DetailsPageComponent,
     AddCVComponent,
     LoginComponent,
+    CarouselComponent,
   ],
   imports: [
     FormsModule,
