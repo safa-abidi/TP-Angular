@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { CV } from './Model/CV';
 
 @Injectable({
@@ -6,6 +7,8 @@ import { CV } from './Model/CV';
 })
 export class CvsService {
   private cvs: CV[];
+  private selPersonne = new Subject<CV>();
+  public mySelPersonne$ = this.selPersonne.asObservable();
 
   constructor() {
     this.cvs = [
@@ -39,5 +42,11 @@ export class CvsService {
   addCV(cv: CV): void {
     cv.id = this.cvs[this.cvs.length - 1].id++;
     this.cvs.push(cv);
+  }
+
+  showCV(cv: CV) {
+    this.selPersonne.next(cv);
+    console.log(cv);
+
   }
 }

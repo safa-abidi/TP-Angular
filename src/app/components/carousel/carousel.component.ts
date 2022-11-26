@@ -7,14 +7,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
-  imageObservable : Observable<string> | undefined;;
+  imageObservable$ : Observable<string> | undefined;;
   images = ['7.jpg', '8.jpg', 'bg.png'];
   bgImage: string = '';
 
   constructor() {}
 
   ngOnInit(): void {
-    this.imageObservable = new Observable<string>((observer) => {
+    this.imageObservable$ = new Observable<string>((observer) => {
       let i = this.images.length - 1;
       setInterval(() => {
         observer.next(this.images[i]);
@@ -26,9 +26,7 @@ export class CarouselComponent implements OnInit {
       }, 2500);
     });
 
-    this.imageObservable.subscribe((image: string) => {
-      console.log(image);
-
+    this.imageObservable$.subscribe((image: string) => {
       this.bgImage = image;
     });
 

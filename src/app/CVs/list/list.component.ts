@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CvsService } from '../cvs.service';
 import { CV } from '../Model/CV';
 
 @Component({
@@ -11,12 +12,8 @@ export class ListComponent implements OnInit {
   @Input() cvs!: CV[];
   @Output() selectedCV = new EventEmitter();
 
-  showCV(selected: any){
-    this.selectedCV.emit(selected);
+  constructor(private cvService: CvsService) { }
 
-  }
-
-  constructor() { }
 
   ngOnInit(): void {
   }

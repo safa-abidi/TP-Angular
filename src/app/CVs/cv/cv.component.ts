@@ -12,11 +12,11 @@ export class CvComponent implements OnInit {
 
   selectedCV!: CV;
 
+  constructor(private cvsService: CvsService) {}
+
   selectCV(cv: CV){
     this.selectedCV = cv;
   }
-
-  constructor(private cvsService: CvsService) {}
 
   ngOnInit(): void {
     this.cvs = this.cvsService.getCVs();
